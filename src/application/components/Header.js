@@ -5,6 +5,7 @@ import '../styles/Header.css'
 import { GiBookshelf, GiHamburgerMenu } from 'react-icons/gi'
 import { FiLogIn } from 'react-icons/fi'
 import { FaQuestionCircle, FaBook, FaUsers } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export default class Header extends React.Component {
 
@@ -27,10 +28,10 @@ export default class Header extends React.Component {
                 className="Header"
             >
                 <div className="Principal" >
-                    <div className="Logo" >
+                    <Link to='/' className="Logo" >
                         <p>Editora ABC</p>
-                        <GiBookshelf style={{marginBottom: 14, marginLeft: 5}} />
-                    </div>
+                        <GiBookshelf style={{ marginBottom: 14, marginLeft: 5 }} />
+                    </Link>
                     <GiHamburgerMenu onClick={() => this.setState({ renderOptions: !this.state.renderOptions })} className="Menu" />
                 </div>
                 <div className="Header-content" >

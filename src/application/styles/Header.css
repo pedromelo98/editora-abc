@@ -12,6 +12,7 @@
     font-size: 3vw;
     overflow: hidden;
     transition: height 600ms ease-in-out;
+    z-index: 10;
 }
 
 .Header-content {
@@ -53,10 +54,12 @@
     height: 130px;
     width: 100vw;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .Logo {
     display: flex;
     align-items: center;
     padding: 20px;
+    color: #ffffe6;
 }

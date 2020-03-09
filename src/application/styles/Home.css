@@ -6,12 +6,16 @@
 }
 
 .Backgrounded {
-  height: 85vh;
+  height: 90vh;
   width: 100vw;
   background-image: url('../assets/images/allbooks.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .Options {
@@ -22,7 +26,31 @@
   font-size: 50px;
 }
 
-.Cards {}
+.Ten-books {
+  height: 600px;
+  width: 400px;
+  background-color: #1b1714;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.Invisible {
+  background: url(../assets/images/allbooks.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Book-text {
+  font-size: 40px;
+  color: #ffffe6;
+  font-family: Shrinkhand;
+  padding: 20px;
+}
 
 @media(max-width:700px) {
   .Cards {

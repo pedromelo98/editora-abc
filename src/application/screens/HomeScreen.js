@@ -3,6 +3,8 @@ import React from 'react';
 import '../../App.css'
 import '../styles/Home.css'
 
+import BookStoresCards from '../components/BookStoresCards'
+
 export default class Home extends React.Component {
 
     state = {
@@ -16,11 +18,15 @@ export default class Home extends React.Component {
         return (
             <div className="App" >
                 <div className="Home" >
-                    <div className="Options" >
-                        teste
-                    </div>
+                    <BookStoresCards />
                     <div className="Backgrounded" >
-                        
+                        <div className="Ten-books" >
+                            <div className="Book-text" >
+                                <p style={{ fontSize: 70, color: '#802b00' }} >Os 10+</p>
+                                <p style={{ fontSize: 40, fontFamily: 'FredokaOne' }} className="Invisible" >livros vendidos da Editora ABC</p>
+                                <p style={{ fontSize: 70, color: '#802b00' }} >2019</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
