@@ -1,0 +1,31 @@
+.Home {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 130px;
+}
+
+.Backgrounded {
+  height: 85vh;
+  width: 100vw;
+  background-image: url('../assets/images/allbooks.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.Options {
+  height: 100vh;
+  display: flex;
+  background-color: white;
+  color: black;
+  font-size: 50px;
+}
+
+.Cards {}
+
+@media(max-width:700px) {
+  .Cards {
+    width: 100vw;
+  }
+}
