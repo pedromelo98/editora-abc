@@ -4,6 +4,7 @@ import '../../App.css'
 import '../styles/Home.css'
 
 import BookStoresCards from '../components/BookStoresCards'
+import Books from '../components/Books';
 
 export default class Home extends React.Component {
 
@@ -18,7 +19,7 @@ export default class Home extends React.Component {
         return (
             <div className="App" >
                 <div className="Home" >
-                    <BookStoresCards />
+                    <Books />
                     <div className="Backgrounded" >
                         <div className="Ten-books" >
                             <div className="Book-text" >
@@ -28,6 +29,7 @@ export default class Home extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <BookStoresCards />
                 </div>
             </div>
         );

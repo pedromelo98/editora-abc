@@ -36,7 +36,11 @@ export default class Header extends React.Component {
                 </div>
                 <div className="Header-content" >
                     <div className="Header-item" >
-                        <p>Log-in</p>
+                        <p>Entrar</p>
+                        <FiLogIn className="Icon-header" />
+                    </div>
+                    <div className="Header-item" >
+                        <p>Cadastrar</p>
                         <FiLogIn className="Icon-header" />
                     </div>
                     <div className="Header-item" >
@@ -46,10 +50,6 @@ export default class Header extends React.Component {
                     <div className="Header-item" >
                         <p>Autores</p>
                         <FaUsers className="Icon-header" />
-                    </div>
-                    <div className="Header-item" >
-                        <p>Quem somos</p>
-                        <FaQuestionCircle className="Icon-header" />
                     </div>
                 </div>
 
