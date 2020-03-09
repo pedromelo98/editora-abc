@@ -4,6 +4,6 @@ Necessário para rodar: Nodejs
 
 ### `cd editora-abc`
 
-### `yarn install`
+### `npm install`
 
-### `yarn start`
+### `npm start`
