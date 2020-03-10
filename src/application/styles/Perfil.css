@@ -1,0 +1,38 @@
+.Perfil {
+    padding-top: 130px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+.Title-intro{
+    font-family: Shrinkhand;
+    font-size: 40px;
+}
+
+.Categories {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Categorie {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    font-size: 30px;
+    font-family: FredokaOne;
+}
+
+.Book {
+    width: 500px;
+    height: 500px;
+    float: left;
+}

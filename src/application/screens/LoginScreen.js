@@ -43,7 +43,7 @@ class Login extends React.Component {
     }
 
     validator() {
-        if (this.state.login === 'login' && this.state.password === 'senha')
+        if (this.state.login === 'cultura' && this.state.password === 'senha')
             return true
         return false
     }
@@ -68,7 +68,7 @@ class Login extends React.Component {
     render() {
         if (this.state.redirect) {
             return (
-                <Redirect to='/' />
+                <Redirect to='/perfil' />
             )
         }
         return (

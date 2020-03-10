@@ -36,13 +36,13 @@ class Header extends React.Component {
         if (this.state.user) {
             return (
                 <div>
+                    <Link to='/perfil' onClick={() => this.setState({ renderOptions: false })} className="Header-item" >
+                        <p>{this.state.user.login}</p>
+                        <FaListAlt className="Icon-header" />
+                    </Link>
                     <div onClick={() => { this.props.loginUser(false); this.setState({ renderOptions: false }) }} className="Header-item" >
                         <p>Sair</p>
                         <FiLogOut className="Icon-header" />
-                    </div>
-                    <div className="Header-item" >
-                        <p>Perfil</p>
-                        <FaListAlt className="Icon-header" />
                     </div>
                 </div>
             )
@@ -81,7 +81,7 @@ class Header extends React.Component {
                 className="Header"
             >
                 <div className="Principal" >
-                    <Link to='/' className="Logo" >
+                    <Link to='/' onClick={() => this.setState({ renderOptions: false })} className="Logo" >
                         <p>Editora ABC</p>
                         <GiBookshelf style={{ marginBottom: 14, marginLeft: 5 }} />
                     </Link>
