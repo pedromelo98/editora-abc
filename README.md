@@ -1,4 +1,4 @@
-### Front-end application for a brazilian insurance broker.
+### Front-end application for a brazilian college work(Qualidade e testes de software).
 
 Required to run: `Nodejs`
 
