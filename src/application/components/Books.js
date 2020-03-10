@@ -17,7 +17,7 @@ export default class Books extends React.Component {
                     {name}
                 </div>
                 <div className="Card-body" >
-                    <img className="Book-image" src={picture} />
+                    <img alt='imagem' className="Book-image" src={picture} />
                 </div>
             </div>
         )

@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import Splash from './application/components/Splash';
 import Header from './application/components/Header'
+import Store from './application/redux/Store'
+
+import { Provider } from 'react-redux'
 
 export default class App extends React.Component {
 
@@ -25,10 +27,12 @@ export default class App extends React.Component {
     //   )
     // }
     return (
-      <div className="App" >
-        <Header />
-        {this.props.children}
-      </div>
+      <Provider store={Store} >
+        <div className="App" >
+          <Header />
+          {this.props.children}
+        </div>
+      </Provider>
     );
   }
 }

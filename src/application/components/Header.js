@@ -3,18 +3,71 @@ import React from 'react';
 import '../styles/Header.css'
 
 import { GiBookshelf, GiHamburgerMenu } from 'react-icons/gi'
-import { FiLogIn } from 'react-icons/fi'
-import { FaQuestionCircle, FaBook, FaUsers } from 'react-icons/fa'
+import { FiLogIn, FiLogOut } from 'react-icons/fi'
+import { FaBook, FaUsers, FaListAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
 
-export default class Header extends React.Component {
+import { loginUser } from '../redux/actions/AuthActions'
+
+class Header extends React.Component {
 
     state = {
-        renderOptions: false
+        renderOptions: false,
+        user: false,
+        message: false
     }
 
     componentDidMount() {
 
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        let user = prevState.user
+        if (nextProps.user !== user) {
+            user = nextProps.user
+        }
+        return {
+            user
+        }
+    }
+
+    renderItemsByAuth() {
+        if (this.state.user) {
+            return (
+                <div>
+                    <div onClick={() => { this.props.loginUser(false); this.setState({ renderOptions: false }) }} className="Header-item" >
+                        <p>Sair</p>
+                        <FiLogOut className="Icon-header" />
+                    </div>
+                    <div className="Header-item" >
+                        <p>Perfil</p>
+                        <FaListAlt className="Icon-header" />
+                    </div>
+                </div>
+            )
+        }
+        return (
+            <div>
+                <Link onClick={() => this.setState({ renderOptions: false })} to='/login' className="Header-item" >
+                    <p>Entrar</p>
+                    <FiLogIn className="Icon-header" />
+                </Link>
+                <div className="Header-item" >
+                    <p>Cadastrar</p>
+                    <FiLogIn className="Icon-header" />
+                </div>
+                <div className="Header-item" >
+                    <p>Livros</p>
+                    <FaBook className="Icon-header" />
+                </div>
+                <div className="Header-item" >
+                    <p>Autores</p>
+                    <FaUsers className="Icon-header" />
+                </div>
+            </div>
+
+        )
     }
 
     render() {
@@ -35,22 +88,8 @@ export default class Header extends React.Component {
                     <GiHamburgerMenu onClick={() => this.setState({ renderOptions: !this.state.renderOptions })} className="Menu" />
                 </div>
                 <div className="Header-content" >
-                    <div className="Header-item" >
-                        <p>Entrar</p>
-                        <FiLogIn className="Icon-header" />
-                    </div>
-                    <div className="Header-item" >
-                        <p>Cadastrar</p>
-                        <FiLogIn className="Icon-header" />
-                    </div>
-                    <div className="Header-item" >
-                        <p>Livros</p>
-                        <FaBook className="Icon-header" />
-                    </div>
-                    <div className="Header-item" >
-                        <p>Autores</p>
-                        <FaUsers className="Icon-header" />
-                    </div>
+                    {this.renderItemsByAuth()}
+
                 </div>
 
             </div>
@@ -58,3 +97,10 @@ export default class Header extends React.Component {
     }
 }
 
+const mapStateToProps = state => (
+    {
+        user: state.AuthReducer.user,
+    }
+)
+
+export default connect(mapStateToProps, { loginUser })(Header)

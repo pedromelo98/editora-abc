@@ -17,7 +17,7 @@ export default class Bookstores extends React.Component {
                     {name}
                 </div>
                 <div className="Card-body" >
-                    <img className="Card-image" src={picture} />
+                    <img alt='imagem' className="Card-image" src={picture} />
                 </div>
             </div>
         )
