@@ -1,9 +1,19 @@
-Necessário para rodar: Nodejs
+### Front-end application for a brazilian insurance broker.
 
-### `git clone https://github.com/pedromelo98/editora-abc.git`
+Required to run: `Nodejs`
 
-### `cd editora-abc`
-
-### `npm install`
-
-### `npm start`
+### To run it you have to execute the following commands:
+* To download the project:
+```
+git clone https://github.com/pedromelo98/editora-abc.git
+```
+* To install dependencies:
+```
+cd editora-abc
+npm install
+```
+* To run:
+```
+npm start
+```
+And it should be at http://localhost:3000
