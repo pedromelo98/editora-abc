@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../../App.css'
-import '../styles/Perfil.css'
+import '../styles/Catalogos.css'
 
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
@@ -11,7 +11,7 @@ import { sendAlertMessage } from '../redux/actions/AlertActions'
 import AlertMessage from '../components/AlertMessage'
 import categories from '../assets/files/Categories'
 
-class Perfil extends React.Component {
+class Catalogos extends React.Component {
 
     state = {
         user: false,
@@ -60,9 +60,29 @@ class Perfil extends React.Component {
         setTimeout(() => this.props.sendAlertMessage(false), 5000);
     }
 
-   
+    getBooksByCategorie(categorie) {
+        return categories.categories.filter((item) => {
+            return item.name.toUpperCase().startsWith(categorie.toUpperCase())
+        })
+    }
 
-    
+    renderBooksByCategorie(categorie) {
+        return (
+            this.getBooksByCategorie(categorie)[0].books.map((l, i) => {
+                console.log(i)
+                return (
+                    <div key={i} className="Book" >
+                        <div className="Book-title" >
+                            <p>{l.name}</p>
+                        </div>
+                        <div className="Book-body" >
+                            <img className="Book-image" alt="imagem do livro" src={require(`../assets/images/book-cover${i}.jpg`)} />
+                        </div>
+                    </div>
+                )
+            })
+        )
+    }
 
     renderSelectOptions() {
         return categories.categories.map((l, i) => {
@@ -109,8 +129,23 @@ class Perfil extends React.Component {
                         type={this.state.message.type}
                     />
                 }
-                <div className="Perfil" >
-                    
+                <div className="Catalogos" >
+                    <p className="Title-intro" >Catálogos</p>
+                    <div className="Select" >
+                        <p>Filtrar catalogos:</p>
+                        <select
+                            onChange={(e) => this.setState({ filterCategorie: e.target.value })}
+                            value={this.state.filterCategorie}
+                            placeholder='Selecionar categoria'
+                            id='categories'
+                        >
+                            <option value={''} >Todos</option>
+                            {this.renderSelectOptions()}
+                        </select>
+                    </div>
+                    <div className="Categories" >
+                        {this.renderCategories()}
+                    </div>
                 </div>
             </div >
         );
@@ -124,5 +159,5 @@ const mapStateToProps = state => (
     }
 )
 
-export default connect(mapStateToProps, { loginUser, sendAlertMessage })(Perfil)
+export default connect(mapStateToProps, { loginUser, sendAlertMessage })(Catalogos)
 
