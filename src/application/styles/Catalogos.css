@@ -64,6 +64,52 @@
     overflow: hidden;
 }
 
+.Sale {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    position: absolute;
+    padding: 5px;
+    z-index: 1;
+    width: 50px;
+    height: 30px;
+    bottom: 60px;
+    right: 0px;
+    color: #fff;
+    background-color: red;
+    box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+    transition: 0.2s;
+}
+
+.Sale:hover {
+    color: red;
+    background-color: #fff;
+}
+
+.Book-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    position: absolute;
+    padding: 5px;
+    z-index: 1;
+    width: 50px;
+    height: 30px;
+    bottom: 15px;
+    right: 0px;
+    color: #fff;
+    background-color: green;
+    box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+    transition: 0.2s;
+}
+
+.Book-footer:hover {
+    color: green;
+    background-color: #fff;
+}
+
 .Select {
     display: flex;
     align-items: center;

@@ -11,10 +11,7 @@
                 },
                 {
                     "name": "Mais um de Terror"
-                },
-                {
-                    "name": "Ultimo de Terror"
-                }
+                } 
             ]
         },
         {
@@ -25,12 +22,6 @@
                 },
                 {
                     "name": "Outro de Romance"
-                },
-                {
-                    "name": "Mais um de Romance"
-                },
-                {
-                    "name": "Ultimo de Romance"
                 }
             ]
         },
@@ -56,15 +47,6 @@
             "books": [
                 {
                     "name": "Livro de Ação"
-                },
-                {
-                    "name": "Outro de Ação"
-                },
-                {
-                    "name": "Mais um de Ação"
-                },
-                {
-                    "name": "Ultimo de Ação"
                 }
             ]
         },
@@ -96,9 +78,6 @@
                 },
                 {
                     "name": "Mais um de Humor"
-                },
-                {
-                    "name": "Ultimo de Humor"
                 }
             ]
         },
@@ -110,12 +89,6 @@
                 },
                 {
                     "name": "Outro de Biografias"
-                },
-                {
-                    "name": "Mais um de Biografias"
-                },
-                {
-                    "name": "Ultimo de Biografias"
                 }
             ]
         },
@@ -141,15 +114,6 @@
             "books": [
                 {
                     "name": "Livro de Jogos"
-                },
-                {
-                    "name": "Outro de Jogos"
-                },
-                {
-                    "name": "Mais um de Jogos"
-                },
-                {
-                    "name": "Ultimo de Jogos"
                 }
             ]
         }

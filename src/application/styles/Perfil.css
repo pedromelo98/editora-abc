@@ -1,10 +1,104 @@
 .Perfil {
-    padding-top: 130px;
     width: 100%;
-    height: 100%;
     background-color: #fff;
+    color: #802b00;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-family: Shrinkhand;
+    font-size: 30px;
+    padding-top: 130px;
+}
+
+.My-boughts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    border-radius: 50px;
+    top: 50%;
+    right: 10px;
+    font-family: FredokaOne;
+    background-color: #802b00;
+    color: #fff;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    float: left;
+    transition: 0.5s;
+    box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.Store-title{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    background-color: #1b1714;
+    border-radius: 50px;
+    padding: 10px;
+    color: #ffffe6;
+}
+
+.My-boughts:hover {
+    width: 100px;
+}
+
+.Icon{
+}
+
+.Book-store {
+    height: 50px;
+    width: 100vw;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Boughts-text {
+    font-size: 10px;
+}
+
+.Store-data{
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    background-image: url('../assets/images/allbooks.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+.Store-column{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    padding-left: 30px;
+}
+
+.Data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1714;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+}
+
+.Feature{
+    font-size: 25px;
+    color: #802b00;
 }

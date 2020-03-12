@@ -4,12 +4,16 @@ import '../../App.css'
 import '../styles/Perfil.css'
 
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
+import { MdShoppingCart } from 'react-icons/md'
+import { MdWeb, MdAttachMoney } from 'react-icons/md'
+import { FiLogOut } from 'react-icons/fi'
 
 import { loginUser } from '../redux/actions/AuthActions'
 import { sendAlertMessage } from '../redux/actions/AlertActions'
 import AlertMessage from '../components/AlertMessage'
 import categories from '../assets/files/Categories'
+import Boughts from '../components/Boughts'
 
 class Perfil extends React.Component {
 
@@ -60,10 +64,6 @@ class Perfil extends React.Component {
         setTimeout(() => this.props.sendAlertMessage(false), 5000);
     }
 
-   
-
-    
-
     renderSelectOptions() {
         return categories.categories.map((l, i) => {
             return <option key={i} value={l.name} >{l.name}</option>
@@ -110,7 +110,29 @@ class Perfil extends React.Component {
                     />
                 }
                 <div className="Perfil" >
-                    
+                    <div className="Store-data" >
+                        <p className="Store-title" >Livraria {this.state.user.login}</p>
+                        <div className="Store-column" >
+                            <div className="Data" >
+                                <MdWeb />
+                                <p className="Feature" >Website</p>
+                            </div>
+                            <div className="Data" >
+                                <MdAttachMoney />
+                                <p className="Feature" >Desconto atual: 10%</p>
+                            </div>
+                        </div>
+                        <div style={{ alignItems: 'flex-end' }} className="Store-column" >
+                            <div className="Data" >
+                                <p className="Feature" >Sair</p>
+                                <FiLogOut />
+                            </div>
+                            <Link to='/shop' className="Data" >
+                                <MdShoppingCart style={{ color: '#802b00' }} />
+                                <p className="Feature" >Carrinho</p>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div >
         );

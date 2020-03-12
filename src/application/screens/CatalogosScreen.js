@@ -5,6 +5,7 @@ import '../styles/Catalogos.css'
 
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
+import { MdShoppingCart, MdAdd, MdAttachMoney } from 'react-icons/md'
 
 import { loginUser } from '../redux/actions/AuthActions'
 import { sendAlertMessage } from '../redux/actions/AlertActions'
@@ -77,6 +78,14 @@ class Catalogos extends React.Component {
                         </div>
                         <div className="Book-body" >
                             <img className="Book-image" alt="imagem do livro" src={require(`../assets/images/book-cover${i}.jpg`)} />
+                        </div>
+                        <div className="Sale" >
+                            <MdAttachMoney />
+                            <p>10%</p>
+                        </div>
+                        <div className="Book-footer" >
+                            <MdAdd />
+                            <MdShoppingCart />
                         </div>
                     </div>
                 )

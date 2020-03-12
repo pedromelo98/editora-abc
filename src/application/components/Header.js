@@ -5,7 +5,7 @@ import '../styles/Header.css'
 import { GiBookshelf, GiHamburgerMenu } from 'react-icons/gi'
 import { FiLogIn, FiLogOut } from 'react-icons/fi'
 import { FaBook, FaUsers, FaListAlt } from 'react-icons/fa'
-import { MdLocalLibrary, MdHome } from 'react-icons/md'
+import { MdLocalLibrary, MdShoppingCart } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 
@@ -37,13 +37,13 @@ class Header extends React.Component {
         if (this.state.user) {
             return (
                 <div>
-                    <Link to='/' onClick={() => this.setState({ renderOptions: false })} className="Header-item" >
-                        <p>Home</p>
-                        <MdHome className="Icon-header" />
-                    </Link>
                     <Link to='/perfil' onClick={() => this.setState({ renderOptions: false })} className="Header-item" >
                         <p>{this.state.user.login}</p>
                         <MdLocalLibrary className="Icon-header" />
+                    </Link>
+                    <Link to='/shop' onClick={() => this.setState({ renderOptions: false })} className="Header-item" >
+                        <p>Carrinho</p>
+                        <MdShoppingCart className="Icon-header" />
                     </Link>
                     <Link to='/catologos' onClick={() => this.setState({ renderOptions: false })} className="Header-item" >
                         <p>Catálogos</p>
