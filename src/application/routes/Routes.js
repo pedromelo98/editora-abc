@@ -4,6 +4,7 @@ import HomeScreen from "../screens/HomeScreen.js";
 import LoginScreen from "../screens/LoginScreen";
 import PerfilScreen from "../screens/PerfilScreen.js";
 import CatalogosScreen from "../screens/CatalogosScreen.js";
+import RegisterScreen from "../screens/RegisterScreen.js";
 import App from "../../App";
 
 
@@ -21,6 +22,9 @@ function Routes() {
                     </Route>
                     <Route path="/perfil">
                         <PerfilScreen />
+                    </Route>
+                    <Route path="/register">
+                        <RegisterScreen />
                     </Route>
                     <Route path="/catologos">
                         <CatalogosScreen />

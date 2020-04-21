@@ -62,10 +62,10 @@ class Header extends React.Component {
                     <p>Entrar</p>
                     <FiLogIn className="Icon-header" />
                 </Link>
-                <div className="Header-item" >
+                <Link to='/register' className="Header-item" >
                     <p>Cadastrar</p>
                     <FiLogIn className="Icon-header" />
-                </div>
+                </Link>
                 <div className="Header-item" >
                     <p>Livros</p>
                     <FaBook className="Icon-header" />

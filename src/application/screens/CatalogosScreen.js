@@ -11,13 +11,15 @@ import { loginUser } from '../redux/actions/AuthActions'
 import { sendAlertMessage } from '../redux/actions/AlertActions'
 import AlertMessage from '../components/AlertMessage'
 import categories from '../assets/files/Categories'
+import Book from '../components/Book';
 
 class Catalogos extends React.Component {
 
     state = {
         user: false,
         message: false,
-        filterCategorie: false
+        filterCategorie: false,
+        renderBook: false
     }
 
     componentDidMount() {
@@ -72,7 +74,7 @@ class Catalogos extends React.Component {
             this.getBooksByCategorie(categorie)[0].books.map((l, i) => {
                 console.log(i)
                 return (
-                    <div key={i} className="Book" >
+                    <div onClick={() => this.setState({ renderBook: { ...l, index: i } })} key={i} className="Book" >
                         <div className="Book-title" >
                             <p>{l.name}</p>
                         </div>
@@ -128,6 +130,13 @@ class Catalogos extends React.Component {
         if (!this.props.user) {
             return (
                 <Redirect to='/' />
+            )
+        }
+        if (this.state.renderBook) {
+            return (
+                <div className="App" >
+                    <Book choosedBook={this.state.renderBook} onBack={() => this.setState({ renderBook: false })} />
+                </div>
             )
         }
         return (

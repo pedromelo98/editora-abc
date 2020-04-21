@@ -13,7 +13,6 @@ import { loginUser } from '../redux/actions/AuthActions'
 import { sendAlertMessage } from '../redux/actions/AlertActions'
 import AlertMessage from '../components/AlertMessage'
 import categories from '../assets/files/Categories'
-import Boughts from '../components/Boughts'
 
 class Perfil extends React.Component {
 
